@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh">
 
@@ -156,7 +155,7 @@
         </div>
     </div>
     <div class="scare">
-        <video id="video" class="video" src="https://vdse.bdstatic.com/192d9a98d782d9c74c96f09db9378d93.mp4"
+        <video id="video" class="video" src="https://alimov2.a.kwimgs.com/upic/2022/07/20/22/BMjAyMjA3MjAyMjIxNTVfMjcxMjA2MjQyNV83OTcwNjY4ODA1MV8wXzM=_b_Bcefb0c7b4a2807ccb7a1345d141076e4.mp4?clientCacheKey=3xfbemxz3sd546m_b.mp4&tt=b&di=248f86b2&bp=10000"
             loop="loop"></video>
         <img src="https://count.getloli.com/get/@rickroll" style="display: none;">
     </div>
@@ -177,7 +176,7 @@
             videoClick();
         }
         function buttonClick2(event) {
-            window.location.href = 'https://xingye.me/game/index.php'
+            window.location.href = 'https://www.gov.cn/'
         }
         function videoClick(event) {
             if (event) event.preventDefault();
