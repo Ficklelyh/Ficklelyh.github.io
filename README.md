@@ -143,13 +143,12 @@
     <div id="overlay" class="overlay">
         <div class="text-bg">
             <div class="overlay-body">
-                <p class="overlay-title">您是否已满18岁</p>
-                <p class="overlay-description">以下内容可能不适合<b>未满18岁</b>的人群观看，我们需要确认您的年龄。</p>
-                <p class="overlay-description">The following may not be suitable for people <b>under the age of
-                        18</b> and we need to confirm your age.</p>
+                <p class="overlay-title">Welcome To Fick</p>
+                <p class="overlay-description">测试</p>
+                <p class="overlay-description">测试1</p>
                 <div class="overlay-buttons-wrapper">
-                    <div id="accept-button" class="overlay-button">已满18岁</div>
-                    <div id="decline-button" class="overlay-button">未满18岁</div>
+                    <div id="accept-button" class="overlay-button">端口</div>
+                    <div id="decline-button" class="overlay-button">端口</div>
                 </div>
             </div>
         </div>
