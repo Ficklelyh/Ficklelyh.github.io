@@ -178,7 +178,7 @@
         function buttonClick2(event) {
             window.location.href = 'http://ficktools.top/Minitools/'
         }
-        function buttonClick2(event) {
+        function buttonClick3(event) {
             window.location.href = 'https://jq.qq.com/?_wv=1027&k=3ggo2rZq'
         }
         
