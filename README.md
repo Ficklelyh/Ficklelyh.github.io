@@ -149,7 +149,7 @@
                 <div class="overlay-buttons-wrapper">
                     <div id="accept-button" class="overlay-button">视   频</div>
                     <div id="decline-button" class="overlay-button">辅助官网</div>
-                    <div id="decline-button" class="overlay-button">官方群</div>
+                    <div id="decline-button" class="overlay-button">nill</div>
                 </div>
             </div>
         </div>
@@ -179,7 +179,7 @@
             window.location.href = 'http://ficktools.top/Minitools/'
         }
         function buttonClick3(event) {
-            window.location.href = 'https://jq.qq.com/?_wv=1027&k=3ggo2rZq'
+            window.location.href = 'http://ficktools.top/view.php/505cfa22323ee724af91401eea4e5def.jpeg'
         }
         
         
