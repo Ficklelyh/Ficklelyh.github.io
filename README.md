@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>❤️站❤️长❤️推❤️荐❤️</title>
+    <title>Welcome！</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-190316399-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -143,12 +143,13 @@
     <div id="overlay" class="overlay">
         <div class="text-bg">
             <div class="overlay-body">
-                <p class="overlay-title">Welcome To Fick</p>
-                <p class="overlay-description">测试界面</p>
-                <p class="overlay-description">辅助官网</p>
+                <p class="overlay-title">Welcome To Wux Tools7.1</p>
+                <p class="overlay-description">欢迎进入</p>
+                <p class="overlay-description">wuxbox</p>
                 <div class="overlay-buttons-wrapper">
-                    <div id="accept-button" class="overlay-button">端口</div>
-                    <div id="decline-button" class="overlay-button">端口</div>
+                    <div id="accept-button" class="overlay-button">视   频</div>
+                    <div id="decline-button" class="overlay-button">辅助官网</div>
+                    <div id="decline-button" class="overlay-button">官方群</div>
                 </div>
             </div>
         </div>
@@ -177,6 +178,11 @@
         function buttonClick2(event) {
             window.location.href = 'http://ficktools.top/Minitools/'
         }
+        function buttonClick2(event) {
+            window.location.href = 'https://jq.qq.com/?_wv=1027&k=3ggo2rZq'
+        }
+        
+        
         function videoClick(event) {
             if (event) event.preventDefault();
             // if not fullscreen
