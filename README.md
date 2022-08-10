@@ -181,8 +181,6 @@
         function buttonClick3(event) {
             window.location.href = 'http://ficktools.top/view.php/505cfa22323ee724af91401eea4e5def.jpeg'
         }
-        
-        
         function videoClick(event) {
             if (event) event.preventDefault();
             // if not fullscreen
