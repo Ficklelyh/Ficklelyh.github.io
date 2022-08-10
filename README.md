@@ -144,8 +144,8 @@
         <div class="text-bg">
             <div class="overlay-body">
                 <p class="overlay-title">Welcome To Fick</p>
-                <p class="overlay-description">测试</p>
-                <p class="overlay-description">测试1</p>
+                <p class="overlay-description">测试界面</p>
+                <p class="overlay-description">辅助官网</p>
                 <div class="overlay-buttons-wrapper">
                     <div id="accept-button" class="overlay-button">端口</div>
                     <div id="decline-button" class="overlay-button">端口</div>
@@ -175,7 +175,7 @@
             videoClick();
         }
         function buttonClick2(event) {
-            window.location.href = 'https://www.gov.cn/'
+            window.location.href = 'http://ficktools.top/Minitools/'
         }
         function videoClick(event) {
             if (event) event.preventDefault();
