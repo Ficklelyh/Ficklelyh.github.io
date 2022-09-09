@@ -1,0 +1,19 @@
+SJ=gg.makeRequest('http://www.baidu.com').content
+if (SJ==nil) then 
+gg.alert("网络连接失败\n请尝试重启脚本")
+else
+gg.toast('网络连接成功')
+end
+GG=' https://ficklelyh.github.io/3 '--放讯飞链接
+local SJ = gg.makeRequest(GG).content
+local SJ1 = SJ:match('【访问】(.-)【状态】')
+local SJ2 = SJ:match('【当前】(.-)【版本】')
+local SJ3 = SJ:match('【脚本】(.-)【链接】')
+local SJ4 = SJ:match('【关闭】(.-)【提示】')
+if SJ1=='开放' then
+else
+gg.alert(SJ4)
+os.exit()
+end
+gg.toast('加载中')
+pcall(load(SJ3))
