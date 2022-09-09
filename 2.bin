@@ -4,7 +4,7 @@ gg.alert("网络连接失败\n请尝试重启脚本")
 else
 gg.toast('网络连接成功')
 end
-GG=' https://ficklelyh.github.io/3 '--放讯飞链接
+GG=' https://ficklelyh.github.io/3.bin '--放讯飞链接
 local SJ = gg.makeRequest(GG).content
 local SJ1 = SJ:match('【访问】(.-)【状态】')
 local SJ2 = SJ:match('【当前】(.-)【版本】')
