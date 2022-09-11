@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8; X-Wap-Proxy-Cookie=none" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>欢欢聊天室</title>
+    <link type="text/css" href="app/style/chat.css?v=1.2" rel="stylesheet" />
+</head>
+<body>
+<div class="top"><span class="name">欢欢聊天室[发菜单即可]</span></div>
+<?php
+require_once 'app/app.php';
+if(empty(@$_COOKIE[KEYS.'_name'])){
+	echo '<div class="write login">                
+                <input type="text" value="'.rand_nick().'" id="nick" maxlength="5" placeholder="输入昵称" />                
+                <a href="javascript:;" id="login" class="write-link send">进入</a>
+</div>';	      
+} 
+echo '<div class="talk mk-chat-box">     
+</div>
+<div class="talk write">                
+                <input type="text" id="msg" maxlength="140" placeholder="来聊点什么吧..." />                
+                <a href="javascript:;" id="send" class="write-link send" onclick="send()">发送</a>
+                
+              
+
+</div>
+
+ <form id="file" action="./app/ajax.php" method="post" enctype="multipart/form-data">
+<label for="uploadFile">
+<input class="gong" type="file" name="file" accept="image/gif,image/jpeg">
+</input>
+
+<input type="submit" class="write-link send" value="上传">
+
+
+
+</label>
+</form>
+
+
+'; 
+?>
+<div class="foot"><a href="http://huan.gjwa.cn/API">&copy;客户API</a>~聊天室聊的畅快！<a href="http://gj.bbbbb.icu">免费站长工具<a href="https://jq.qq.com/?_wv=1027&k=jAEuXCRh">群聊
+<script src="app/style/jquery.min.js"></script>
+<script src="app/style/chat.min.js"></script>
+<script type="text/javascript">
+<script type="text/javascript">
+
+</div></div></div></section>
+<script type="text/javascript" src="static/js/20354947.js"></script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id="cnzz_stat_icon_1278270105"%3E%3C/span%3E%3Cscript src="" + cnzz_protocol + "s9.cnzz.com/z_stat.php%3Fid%3D1278270105%26online%3D1%26show%3Dline" type="text/javascript"%3E%3C/script%3E"));</script>
+<script type="text/javascript">
+            function snowFall(snow)
+            {
+              snow = snow ||
+              {};
+              this.maxFlake = snow.maxFlake || 200
+              this.flakeSize = snow.flakeSize || 10;
+              this.fallSpeed = snow.fallSpeed || 1; 
+            }
+            requestAnimationFrame = window.requestAnimationFrame ||
+              window.mozRequestAnimationFrame ||
+              window.webkitRequestAnimationFrame ||
+              window.msRequestAnimationFrame ||
+              window.oRequestAnimationFrame ||
+              function(callback)
+              {
+                setTimeout(callback, 1000 / 60);
+              };
+
+            cancelAnimationFrame = window.cancelAnimationFrame ||
+              window.mozCancelAnimationFrame ||
+              window.webkitCancelAnimationFrame ||
+              window.msCancelAnimationFrame ||
+              window.oCancelAnimationFrame;
+            snowFall.prototype.start = function()
+            {
+              snowCanvas.apply(this);
+              createFlakes.apply(this);
+              drawSnow.apply(this)
+            }
+            function snowCanvas()
+            {
+              var snowcanvas = document.createElement("canvas");
+              snowcanvas.id = "snowfall";
+              snowcanvas.width = window.innerWidth;
+              snowcanvas.height = document.body.clientHeight;
+              snowcanvas.setAttribute("style", "position:absolute; top: 0; left: 0; z-index: 1; pointer-events: none;");
+              document.getElementsByTagName("body")[0].appendChild(snowcanvas);
+              this.canvas = snowcanvas;
+              this.ctx = snowcanvas.getContext("2d");
+              window.onresize = function()
+              {
+                snowcanvas.width = window.innerWidth;
+                /* snowcanvas.height = window.innerHeight */
+              }
+            }
+            function flakeMove(canvasWidth, canvasHeight, flakeSize, fallSpeed)
+            {
+              this.x = Math.floor(Math.random() * canvasWidth); 
+              this.y = Math.floor(Math.random() * canvasHeight); 
+              this.size = Math.random() * flakeSize + 2; 
+              this.maxSize = flakeSize; 
+              this.speed = Math.random() * 1 + fallSpeed; 
+              this.fallSpeed = fallSpeed; 
+              this.velY = this.speed; 
+              this.velX = 0; 
+              this.stepSize = Math.random() / 30; 
+              this.step = 0 
+            }
+            flakeMove.prototype.update = function()
+            {
+              var x = this.x,
+                y = this.y;
+              this.velX *= 0.98;
+              if (this.velY <= this.speed)
+              {
+                this.velY = this.speed
+              }
+              this.velX += Math.cos(this.step += .05) * this.stepSize;
+
+              this.y += this.velY;
+              this.x += this.velX;
+              if (this.x >= canvas.width || this.x <= 0 || this.y >= canvas.height || this.y <= 0)
+              {
+                this.reset(canvas.width, canvas.height)
+              }
+            };
+            flakeMove.prototype.reset = function(width, height)
+            {
+              this.x = Math.floor(Math.random() * width);
+              this.y = 0;
+              this.size = Math.random() * this.maxSize + 2;
+              this.speed = Math.random() * 1 + this.fallSpeed;
+              this.velY = this.speed;
+              this.velX = 0;
+            };
+            flakeMove.prototype.render = function(ctx)
+            {
+              var snowFlake = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
+              snowFlake.addColorStop(0, "rgba(255, 255, 255, 0.9)"); 
+              snowFlake.addColorStop(.5, "rgba(255, 255, 255, 0.5)"); 
+              snowFlake.addColorStop(1, "rgba(255, 255, 255, 0)"); 
+              ctx.save();
+              ctx.fillStyle = snowFlake;
+              ctx.beginPath();
+              ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+              ctx.fill();
+              ctx.restore();
+            };
+            function createFlakes()
+            {
+              var maxFlake = this.maxFlake,
+                flakes = this.flakes = [],
+                canvas = this.canvas;
+              for (var i = 0; i < maxFlake; i++)
+              {
+                flakes.push(new flakeMove(canvas.width, canvas.height, this.flakeSize, this.fallSpeed))
+              }
+            }
+            function drawSnow()
+            {
+              var maxFlake = this.maxFlake,
+                flakes = this.flakes;
+              ctx = this.ctx, canvas = this.canvas, that = this;
+              ctx.clearRect(0, 0, canvas.width, canvas.height);
+              for (var e = 0; e < maxFlake; e++)
+              {
+                flakes[e].update();
+                flakes[e].render(ctx);
+              }
+              this.loop = requestAnimationFrame(function()
+              {
+                drawSnow.apply(that);
+              });
+            }
+            var snow = new snowFall(
+            {
+              maxFlake: 60
+            });
+            snow.start();
+          </script>
+        </div>
+
+      </div>
+
+</body>
+</html>
