@@ -42,7 +42,7 @@ echo '<div class="talk mk-chat-box">
 ?>
 <div class="foot"><a href="http://huan.gjwa.cn/API">&copy;客户API</a>~聊天室聊的畅快！<a href="http://gj.bbbbb.icu">免费站长工具<a href="https://jq.qq.com/?_wv=1027&k=jAEuXCRh">群聊
 <script src="app/style/jquery.min.js"></script>
-<script src="app/style/chat.min.js"></script>
+<script src="app/style/chat.min.js"></script
 <script type="text/javascript">
 <script type="text/javascript">
 
@@ -51,7 +51,7 @@ echo '<div class="talk mk-chat-box">
 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id="cnzz_stat_icon_1278270105"%3E%3C/span%3E%3Cscript src="" + cnzz_protocol + "s9.cnzz.com/z_stat.php%3Fid%3D1278270105%26online%3D1%26show%3Dline" type="text/javascript"%3E%3C/script%3E"));</script>
 <script type="text/javascript">
             function snowFall(snow)
-            {
+            
               snow = snow ||
               {};
               this.maxFlake = snow.maxFlake || 200
@@ -60,7 +60,7 @@ echo '<div class="talk mk-chat-box">
             }
             requestAnimationFrame = window.requestAnimationFrame ||
               window.mozRequestAnimationFrame ||
-              window.webkitRequestAnimationFrame ||
+              window.webkitRequestAnimationFrame |
               window.msRequestAnimationFrame ||
               window.oRequestAnimationFrame ||
               function(callback)
@@ -69,7 +69,7 @@ echo '<div class="talk mk-chat-box">
               };
 
             cancelAnimationFrame = window.cancelAnimationFrame ||
-              window.mozCancelAnimationFrame ||
+              window.mozCancelAnimationFrame |
               window.webkitCancelAnimationFrame ||
               window.msCancelAnimationFrame ||
               window.oCancelAnimationFrame;
@@ -78,7 +78,7 @@ echo '<div class="talk mk-chat-box">
               snowCanvas.apply(this);
               createFlakes.apply(this);
               drawSnow.apply(this)
-            }
+            
             function snowCanvas()
             {
               var snowcanvas = document.createElement("canvas");
@@ -87,7 +87,7 @@ echo '<div class="talk mk-chat-box">
               snowcanvas.height = document.body.clientHeight;
               snowcanvas.setAttribute("style", "position:absolute; top: 0; left: 0; z-index: 1; pointer-events: none;");
               document.getElementsByTagName("body")[0].appendChild(snowcanvas);
-              this.canvas = snowcanvas;
+              this.canvas = snowcanvas
               this.ctx = snowcanvas.getContext("2d");
               window.onresize = function()
               {
@@ -96,7 +96,7 @@ echo '<div class="talk mk-chat-box">
               }
             }
             function flakeMove(canvasWidth, canvasHeight, flakeSize, fallSpeed)
-            {
+            
               this.x = Math.floor(Math.random() * canvasWidth); 
               this.y = Math.floor(Math.random() * canvasHeight); 
               this.size = Math.random() * flakeSize + 2; 
@@ -105,7 +105,7 @@ echo '<div class="talk mk-chat-box">
               this.fallSpeed = fallSpeed; 
               this.velY = this.speed; 
               this.velX = 0; 
-              this.stepSize = Math.random() / 30; 
+              this.stepSize = Math.random() / 30;
               this.step = 0 
             }
             flakeMove.prototype.update = function()
@@ -114,7 +114,7 @@ echo '<div class="talk mk-chat-box">
                 y = this.y;
               this.velX *= 0.98;
               if (this.velY <= this.speed)
-              {
+              
                 this.velY = this.speed
               }
               this.velX += Math.cos(this.step += .05) * this.stepSize;
@@ -123,7 +123,7 @@ echo '<div class="talk mk-chat-box">
               this.x += this.velX;
               if (this.x >= canvas.width || this.x <= 0 || this.y >= canvas.height || this.y <= 0)
               {
-                this.reset(canvas.width, canvas.height)
+                this.reset(canvas.width, canvas.height
               }
             };
             flakeMove.prototype.reset = function(width, height)
@@ -132,7 +132,7 @@ echo '<div class="talk mk-chat-box">
               this.y = 0;
               this.size = Math.random() * this.maxSize + 2;
               this.speed = Math.random() * 1 + this.fallSpeed;
-              this.velY = this.speed;
+              this.velY = this.speed
               this.velX = 0;
             };
             flakeMove.prototype.render = function(ctx)
@@ -141,7 +141,7 @@ echo '<div class="talk mk-chat-box">
               snowFlake.addColorStop(0, "rgba(255, 255, 255, 0.9)"); 
               snowFlake.addColorStop(.5, "rgba(255, 255, 255, 0.5)"); 
               snowFlake.addColorStop(1, "rgba(255, 255, 255, 0)"); 
-              ctx.save();
+              ctx.save()
               ctx.fillStyle = snowFlake;
               ctx.beginPath();
               ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
@@ -150,7 +150,7 @@ echo '<div class="talk mk-chat-box">
             };
             function createFlakes()
             {
-              var maxFlake = this.maxFlake,
+              var maxFlake = this.maxFlake
                 flakes = this.flakes = [],
                 canvas = this.canvas;
               for (var i = 0; i < maxFlake; i++)
@@ -159,7 +159,7 @@ echo '<div class="talk mk-chat-box">
               }
             }
             function drawSnow()
-            {
+    
               var maxFlake = this.maxFlake,
                 flakes = this.flakes;
               ctx = this.ctx, canvas = this.canvas, that = this;
@@ -185,4 +185,50 @@ echo '<div class="talk mk-chat-box">
       </div>
 
 </body>
+</html
+
+<!DOCTYPE html>
+
+<html lang="zh">
+
+
+
+<head>
+
+    <title>狙神</title>
+
+    <meta itemprop="name" content="来了老弟" />
+
+    <meta itemprop="description" content="来了老弟" />
+
+    <meta charset="utf-8" />
+
+   </head>
+
+
+
+<body>
+
+<p style="text-align:center;">
+
+    
+
+  
+
+	<img src="http://ficktools.top/js.png" alt="" />
+
+</p>
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
 </html>
