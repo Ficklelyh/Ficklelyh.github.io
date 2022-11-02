@@ -1,234 +1,743 @@
-<!DOCTYPE html>
-<head>
-    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8; X-Wap-Proxy-Cookie=none" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>欢欢聊天室</title>
-    <link type="text/css" href="app/style/chat.css?v=1.2" rel="stylesheet" />
+<html lang="zh-Hans" xml:lang="zh-Hans"><head>
+<meta charset="UTF-8">
+<meta name="author" content="Bandisoft">
+<meta name="keywords" content="Bandizip,반디집,Download Bandizip,Bandizip for Windows,Free Archiver,unzip,unrar,7z,egg,alz,rar,">
+<meta name="description" content="Bandizip official download page">
+<meta name="viewport" content="width=device-width, user-scalable=yes">
+<title>大标题text</title>
+<meta property="og:image" content="https://www.bandisoft.com/img/og/bandizip.png?2">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="yandex-verification" content="f04ca2e77593964d">
+<script type="application/ld+json">
+{
+"@context": "http://schema.org",
+"@type": "Organization",
+"url": "https://www.bandisoft.com",
+"name": "Bandisoft.com",
+"logo": "https://www.bandisoft.com/img/bandisoft.png"
+}
+</script>
+<style>
+html {
+line-height: 160%;
+font-size: 13pt;
+margin: 0;
+padding: 0;
+background-color: #EDEDED;
+overflow-y: scroll;
+-webkit-font-smoothing: antialiased;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+}
+body {
+margin: 0;
+padding: 0;
+}
+li {
+margin-right: 20px;
+}
+strong {
+font-weight: normal;
+color: orangered;
+}
+a:link, a:visited, a:active {
+color: #0059be;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
+}
+a.dimcolor {
+color: #00405B;
+}
+img {
+vertical-align: middle;
+border-style: none;
+}
+img.auto {
+max-width: 100%;
+display: block;
+}
+img.img_shadow {
+height: auto;
+width: auto;
+max-width: 80%;
+background-color: white;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+margin-top: 20px;
+margin-bottom: 20px;        
+}
+img.img_no_shadow {
+height: auto;
+width: auto;
+max-width: 80%;
+margin-top: 20px;
+margin-bottom: 20px;        
+}
+a.black:link, a.black:visited, a.black:hover, a.black:active {
+color: black;
+text-decoration: none;
+}
+video.auto {
+max-width: 100%;
+width: 100%;
+height: auto;
+}
+video.video_shadow {
+max-width: 80%;
+width: 100%;
+height: auto;
+background-color: white;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+margin-top: 20px;
+margin-bottom: 20px;        
+}
+.iframe_container {
+position: relative;
+overflow: hidden;
+width: 90%;
+padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+.responsive-iframe {
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+width: 100%;
+height: 100%;
+}        
+.center_heading {
+font-size: 20pt;
+text-align: center;
+margin-top: 30px;
+line-height: 160%;
+}
+div.div_submenu {
+height: 30px;
+text-align: right;
+padding-top: 5px;
+padding-right: 5px;
+font-size: 11pt;
+color: #aaaaaa;
+}
+h1 {
+font-size: 20pt;
+padding: 0 0 20px 3px;
+border-bottom: 1px solid #cccccc;
+margin: 30px 0 0 0 ;
+font-weight: 600;
+}
+h2 {
+font-size: 14pt;
+color: rgb(17, 58, 104);
+margin: 40px 0 10px 0;
+padding: 0 0 10px 3px;
+line-height: 130%;
+border-bottom: 1px solid #dddddd;
+font-weight: 600;
+}
+h3 {
+font-size: 13pt;
+margin-top: 20px;
+padding: 0 0 5px 3px;
+border-bottom: 1px solid #cccccc;
+font-weight: 600;
+}
+h4 {
+font-size: 13pt;
+margin-top: 20px;
+padding: 0 0 5px 3px;
+font-weight: 600;
+}
+p {
+padding: 3px 0 3px 3px;
+}
+a.button {
+background-color: #0078D7;
+border: none;
+color: white;
+padding: 13px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+transition-duration: 0.4s;
+box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2), 0 3px 5px 0 rgba(0,0,0,0.19);
+margin-top: 10px;
+}
+a.button:hover {
+background-color: #0060AC;
+color: white;
+box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 8px 25px 0 rgba(0,0,0,0.19);
+}
+a.button:link, a.button:visited, a.button:hover, a.button:active {
+color: white;
+text-decoration: none;
+}
+a.smallbutton, a.smallbutton:hover, a.smallbutton:link, a.smallbutton:visited, a.smallbutton:active {
+padding: 10px 32px;
+background-color: #0067B8;
+color: white;
+font-size: 13px;
+}
+a.yellowbutton {
+background-color: #FFFF35;
+color: black;
+}
+a.yellowbutton:hover {
+background-color: #FFD800;
+color: black;
+}
+a.yellowbutton:link, a.yellowbutton:visited, a.yellowbutton:hover, a.yellowbutton:active {
+color: black;
+text-decoration: none;
+}
+.box {
+color: #353535;
+background-color: #f6f8fa;
+padding: 5px 30px 10px 20px;
+margin-bottom: 20px;
+}
+.codebox {
+color: #353535;
+background-color: #fff3d4;
+padding: 10px 30px 10px 20px;
+margin-bottom: 30px;
+font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+font-size: 11pt;
+line-height: 130%;
+word-wrap:break-word;
+}
+.box2 {
+border: solid 1px;
+border-color: black;
+padding: 10px 10px 10px 10px;
+background-color: lightgoldenrodyellow;
+font-size: 10pt;
+}
+.td_mainmenu_color {
+background-color: #181818;
+}
+.td_mainmenu {
+width: 960px;
+margin: 0;
+padding: 0;
+}
+.td_footer_color {
+background-color: #EDEDED;
+}
+.td_submenu_color {
+background-color: #eeeeee;
+}
+.main_menu_height {
+height: 56px;
+}
+.main_menu_font {
+font-size: 12pt;
+}
+.lang_select_font {
+font-size: 9pt;
+}
+td.content {
+padding: 10px;
+}
+a.mainmenu_home:link, a.mainmenu_home:visited, a.mainmenu_home:active, a.mainmenu_home:hover {
+color: #cccccc;
+text-decoration: none;
+margin-right: 5px;
+margin-bottom: 5px;
+}
+a.mainmenu:link, a.mainmenu:visited, a.mainmenu:active, a.mainmenu:hover {
+color: #cccccc;
+text-decoration: none;
+margin-left: 5px;
+margin-right: 5px;
+margin-bottom: 5px;
+}
+a.mainmenu:hover {
+color: white;
+}
+a.mainmenubold:link, a.mainmenubold:visited, a.mainmenubold:hover, a.mainmenubold:active {
+color: #53AAEA;
+text-decoration: none;
+margin-left: 5px;
+margin-right: 5px;
+font-weight: normal;
+}
+a.submenu:link, a.submenu:visited, a.submenu:active, a.submenu:hover {
+color: #222222;
+text-decoration: none;
+margin-left: 5px;
+margin-right: 5px;
+margin-bottom: 5px;
+}
+a.submenu:hover {
+color: #2222ff;
+text-decoration: underline;
+}
+span.submenuSplit {
+color: #bbbbbb;
+}
+.mainTable {
+display: inline-table;
+width: 460px;
+text-align: left;
+}
+.dropdown {
+position: relative;
+display: inline-block;
+text-align: left;
+}
+.dropbtn {
+background-color: #181818;
+color: #cccccc;
+border: none;
+cursor: pointer;
+}
+.dropbtn:focus {
+outline: 0;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 180px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+font-size: 9pt;
+right: 0;
+}
+.dropdown-content a {
+color: black;
+padding: 3px 16px 3px 35px;
+text-decoration: none;
+display: block;
+font-size: 10pt;
+}
+.dropdown-content a:hover {
+background-color: #f1f1f1
+}
+.dropdown:hover .dropdown-content {
+display: block;
+}
+.dropdown:hover .dropbtn {
+color: white;
+background-color: #181818;
+}
+@media ( max-width:960px ) {
+.mainTable {
+display: table;
+width: 90%;
+}
+a.smallbutton, a.smallbutton:hover, a.smallbutton:link, a.smallbutton:visited, a.smallbutton:active {
+font-size: 8pt;
+}
+}
+@media ( max-width:800px ) {
+h1 {
+font-size: 12pt;
+}
+h2 {
+font-size: 10pt;
+}
+.center_heading {
+font-size: 15pt;
+}
+a.button {
+font-size: 10pt;
+}
+html {
+font-size: 9pt;
+}
+.main_menu_font {
+font-size: 10pt;
+}
+.lang_select_font {
+font-size: 8pt;
+}
+a.mainmenu_home {
+display: none;
+}
+a.submenu {
+font-size: 10pt;
+}
+div.div_submenu {
+font-size: 5pt;
+}
+span.submenuSplit {
+display: none;
+}
+a.submenu:link, a.submenu:visited, a.submenu:active, a.submenu:hover {
+margin-left: 2px;
+margin-right: 2px;
+margin-bottom: 2px;
+}
+.codebox{
+font-size: 10pt;
+}
+}
+@media ( max-width:520px ) {
+h1 {
+font-size: 11pt;
+}
+h2 {
+font-size: 10pt;
+}
+h3 {
+font-size: 9pt;
+}
+h4 {
+font-size: 9pt;
+}
+.center_heading {
+font-size: 13pt;
+}
+a.button {
+font-size: 9pt;
+}
+a.submenu {
+font-size: 8pt;
+}
+html {
+font-size: 9pt;
+}
+.main_menu_font {
+font-size: 9pt;
+}
+.lang_select_font {
+font-size: 0pt;
+}
+.codebox{
+font-size: 9pt;
+}
+}
+@media ( max-width:400px ) {
+a.button {
+font-size: 7pt;
+}
+a.submenu {
+font-size: 7pt;
+}
+.main_menu_font {
+font-size: 7pt;
+}
+.lang_select_font {
+font-size: 0pt;
+}
+}
+@media ( max-width:370px ) {
+a.mainmenu:link, a.mainmenu:visited, a.mainmenu:active, a.mainmenu:hover {
+margin-right: 3px;
+margin-left: 0px;
+}
+}
+</style>
+<script>
+function onload() {
+onresizewindow();
+// 언어 선택메뉴 볼드 만들기
+var langID = location.host.substr(0, 3) == "www" ? "www" : location.host.substr(0, 2); // xx.host.com -> xx
+setBold("lang_" + langID);
+setSubmenuActive("bandizip_");
+setSubmenuActive("");
+setSubmenuActive("_");
+// 메인 테이블 속성 바꾸기
+var maintable = document.getElementById("main_table");
+if(maintable)
+maintable.style.tableLayout = "fixed";
+}
+function setBold(itemID) {
+var obj = document.getElementById(itemID);
+if (obj) {
+obj.style.fontWeight = "700";
+obj.style.color = "blue";
+}
+}
+function setSubmenuActive(itemID) {
+var obj = document.getElementById(itemID);
+if (obj) {
+obj.style.color = "#0000c0";
+}
+}
+function onresizewindow() {
+var main_table_width = 800 + 160;
+var table_margin = 2;
+//if (document.documentElement.clientWidth < 900)
+//    document.getElementById("right_ad").style.display = "none";
+if (document.documentElement.clientWidth < main_table_width + table_margin) {
+main_table_width = document.documentElement.clientWidth - table_margin;
+main_table_width = Math.max(main_table_width, 300);
+}
+document.getElementById("table_center").style.width = main_table_width + "px";
+}
+</script>
 </head>
-<body>
-<div class="top"><span class="name">欢欢聊天室[发菜单即可]</span></div>
-<?php
-require_once 'app/app.php';
-if(empty(@$_COOKIE[KEYS.'_name'])){
-	echo '<div class="write login">                
-                <input type="text" value="'.rand_nick().'" id="nick" maxlength="5" placeholder="输入昵称" />                
-                <a href="javascript:;" id="login" class="write-link send">进入</a>
-</div>';	      
-} 
-echo '<div class="talk mk-chat-box">     
+<body onload="onload();" onresize="onresizewindow();">
+<table align="center" style="background-color: white; padding: 0px; border-spacing: 0px; border: none; border-collapse: collapse; width: 100%; table-layout: fixed;" border="0" id="main_table">
+<tbody><tr>
+<td class="td_mainmenu_color"></td>
+<td id="table_center" class="td_mainmenu td_mainmenu_color main_menu_height" style="width: 960px;">
+<table style="width:100%; border:none;" border="0">
+<tbody>
+</tbody></table>
+
+</td>
+<td class="td_mainmenu_color"></td>
+</tr>
+<tr>
+<td class="td_submenu_color"></td>
+<td class="td_submenu_color">
+</td>
+<td class="td_submenu_color"></td>
+</tr>
+<tr>
+<td></td>
+<td class="content" dir="ltr">
+<h1>大标题1</h1>
+<p>文字2</p>
+<style>
+.main_container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+.main_container>div {
+width: 100%;
+max-width: 450px;
+height: auto;
+margin: 10px;
+text-align: center;
+font-size: 15px;
+line-height: 1.8;
+}
+.main_container>div>img {
+margin-left: -2%;
+box-shadow: 0 5px 15px 0 #aaa;
+}
+.main_container>div>h2 {
+margin-top: 2%;
+margin-right: -2%;
+}
+.main_container>div>ul {
+text-align: left;
+}
+</style>
+<div class="main_container">
+<div style="width:100%">
+<br>
+<img src="./img/1.png" class="auto">
 </div>
-<div class="talk write">                
-                <input type="text" id="msg" maxlength="140" placeholder="来聊点什么吧..." />                
-                <a href="javascript:;" id="send" class="write-link send" onclick="send()">发送</a>
-                
-              
+<div>
+<h2>下载</h2>
+<ul>
 
+
+
+
+
+</ul>
+<center>
+<table border="0" style="width:85%; height:60px; padding:0; border-spacing:0px; margin:0;">
+<tbody><tr>
+<td style="padding:0">
+<a class="button" href="/bandizip/dl.php?web" style="padding:0 ; margin:0; height:60px; width:100%;">
+<div style="padding-top:15px">
+下载 名称 安装包 (v7.27)
+<img src="./img/download.24x24.png" style="margin-left:5px; vertical-align:middle;">
 </div>
-
- <form id="file" action="./app/ajax.php" method="post" enctype="multipart/form-data">
-<label for="uploadFile">
-<input class="gong" type="file" name="file" accept="image/gif,image/jpeg">
-</input>
-
-<input type="submit" class="write-link send" value="上传">
-
-
-
-</label>
-</form>
-
-
-'; 
-?>
-<div class="foot"><a href="http://huan.gjwa.cn/API">&copy;客户API</a>~聊天室聊的畅快！<a href="http://gj.bbbbb.icu">免费站长工具<a href="https://jq.qq.com/?_wv=1027&k=jAEuXCRh">群聊
-<script src="app/style/jquery.min.js"></script>
-<script src="app/style/chat.min.js"></script
-<script type="text/javascript">
-<script type="text/javascript">
-
-</div></div></div></section>
-<script type="text/javascript" src="static/js/20354947.js"></script>
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id="cnzz_stat_icon_1278270105"%3E%3C/span%3E%3Cscript src="" + cnzz_protocol + "s9.cnzz.com/z_stat.php%3Fid%3D1278270105%26online%3D1%26show%3Dline" type="text/javascript"%3E%3C/script%3E"));</script>
-<script type="text/javascript">
-            function snowFall(snow)
-            
-              snow = snow ||
-              {};
-              this.maxFlake = snow.maxFlake || 200
-              this.flakeSize = snow.flakeSize || 10;
-              this.fallSpeed = snow.fallSpeed || 1; 
-            }
-            requestAnimationFrame = window.requestAnimationFrame ||
-              window.mozRequestAnimationFrame ||
-              window.webkitRequestAnimationFrame |
-              window.msRequestAnimationFrame ||
-              window.oRequestAnimationFrame ||
-              function(callback)
-              {
-                setTimeout(callback, 1000 / 60);
-              };
-
-            cancelAnimationFrame = window.cancelAnimationFrame ||
-              window.mozCancelAnimationFrame |
-              window.webkitCancelAnimationFrame ||
-              window.msCancelAnimationFrame ||
-              window.oCancelAnimationFrame;
-            snowFall.prototype.start = function()
-            {
-              snowCanvas.apply(this);
-              createFlakes.apply(this);
-              drawSnow.apply(this)
-            
-            function snowCanvas()
-            {
-              var snowcanvas = document.createElement("canvas");
-              snowcanvas.id = "snowfall";
-              snowcanvas.width = window.innerWidth;
-              snowcanvas.height = document.body.clientHeight;
-              snowcanvas.setAttribute("style", "position:absolute; top: 0; left: 0; z-index: 1; pointer-events: none;");
-              document.getElementsByTagName("body")[0].appendChild(snowcanvas);
-              this.canvas = snowcanvas
-              this.ctx = snowcanvas.getContext("2d");
-              window.onresize = function()
-              {
-                snowcanvas.width = window.innerWidth;
-                /* snowcanvas.height = window.innerHeight */
-              }
-            }
-            function flakeMove(canvasWidth, canvasHeight, flakeSize, fallSpeed)
-            
-              this.x = Math.floor(Math.random() * canvasWidth); 
-              this.y = Math.floor(Math.random() * canvasHeight); 
-              this.size = Math.random() * flakeSize + 2; 
-              this.maxSize = flakeSize; 
-              this.speed = Math.random() * 1 + fallSpeed; 
-              this.fallSpeed = fallSpeed; 
-              this.velY = this.speed; 
-              this.velX = 0; 
-              this.stepSize = Math.random() / 30;
-              this.step = 0 
-            }
-            flakeMove.prototype.update = function()
-            {
-              var x = this.x,
-                y = this.y;
-              this.velX *= 0.98;
-              if (this.velY <= this.speed)
-              
-                this.velY = this.speed
-              }
-              this.velX += Math.cos(this.step += .05) * this.stepSize;
-
-              this.y += this.velY;
-              this.x += this.velX;
-              if (this.x >= canvas.width || this.x <= 0 || this.y >= canvas.height || this.y <= 0)
-              {
-                this.reset(canvas.width, canvas.height
-              }
-            };
-            flakeMove.prototype.reset = function(width, height)
-            {
-              this.x = Math.floor(Math.random() * width);
-              this.y = 0;
-              this.size = Math.random() * this.maxSize + 2;
-              this.speed = Math.random() * 1 + this.fallSpeed;
-              this.velY = this.speed
-              this.velX = 0;
-            };
-            flakeMove.prototype.render = function(ctx)
-            {
-              var snowFlake = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
-              snowFlake.addColorStop(0, "rgba(255, 255, 255, 0.9)"); 
-              snowFlake.addColorStop(.5, "rgba(255, 255, 255, 0.5)"); 
-              snowFlake.addColorStop(1, "rgba(255, 255, 255, 0)"); 
-              ctx.save()
-              ctx.fillStyle = snowFlake;
-              ctx.beginPath();
-              ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-              ctx.fill();
-              ctx.restore();
-            };
-            function createFlakes()
-            {
-              var maxFlake = this.maxFlake
-                flakes = this.flakes = [],
-                canvas = this.canvas;
-              for (var i = 0; i < maxFlake; i++)
-              {
-                flakes.push(new flakeMove(canvas.width, canvas.height, this.flakeSize, this.fallSpeed))
-              }
-            }
-            function drawSnow()
-    
-              var maxFlake = this.maxFlake,
-                flakes = this.flakes;
-              ctx = this.ctx, canvas = this.canvas, that = this;
-              ctx.clearRect(0, 0, canvas.width, canvas.height);
-              for (var e = 0; e < maxFlake; e++)
-              {
-                flakes[e].update();
-                flakes[e].render(ctx);
-              }
-              this.loop = requestAnimationFrame(function()
-              {
-                drawSnow.apply(that);
-              });
-            }
-            var snow = new snowFall(
-            {
-              maxFlake: 60
-            });
-            snow.start();
-          </script>
-        </div>
-
-      </div>
-
-</body>
-</html
-
-<!DOCTYPE html>
-
-<html lang="zh">
-
-
-
-<head>
-
-    <title>狙神</title>
-
-    <meta itemprop="name" content="来了老弟" />
-
-    <meta itemprop="description" content="来了老弟" />
-
-    <meta charset="utf-8" />
-
-   </head>
-
-
-
-<body>
-
-<p style="text-align:center;">
-
-    
-
-  
-
-	<img src="http://ficktools.top/js.png" alt="" />
-
+</a>
+</td>
+<td style="padding:0">
+<a class="button" href="/bandizip/dl/" style="padding:0; margin:0; height:60px; width:100%;">
+<div style="padding-top:15px">
+<img src="./img/dot.24x24.png" style="vertical-align:middle;">
+</div>
+</a>
+</td>
+</tr>
+</tbody></table>
+</center>
+<center>
+<table border="0" style="width:85%; height:60px; padding:0; border-spacing:0px; margin:10px 0 0 0 ;">
+<tbody><tr>
+<td style="padding:0">
+<a class="button" href="/bandizip/buy/" style="padding:0 ; margin:0; width:100%; height:60px; ">
+<div style="padding-top:15px">
+<span style="display:inline-block; vertical-align: middle;">购买 名称2 专业版许可证 &gt;</span>
+</div>
+</a>
+</td>
+</tr>
+</tbody></table>
+</center>
+</div>
+</div>
+<br>
+<h2 class="ltr">功能介绍</h2>
+<ul>
+<li>文字1<!--<a href="/bandizip/help/windows-10-on-arm/" target=_blank><img src="/img/outlink.png">--></li>
+<li>文字2</li>
+<li>文字3</li>
+<li>文字4</li>
+<li>文字5</li>
+<li>文字6</li>
+</ul>
+<h2 class="ltr">功能介绍 (付费版本)</h2>
+<style>
+.pediv1 {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.pediv2 {
+float: left;
+}
+.petable {
+max-width: 450px;
+margin: auto 10px;
+text-align: center;
+font-size: .875em;
+word-break: keep-all;
+}
+.petd1 {
+height: 390px;
+}
+.petd2>h4 {
+margin-top: 4%;
+margin-bottom: -4%;
+}
+.peimg {
+width: 100%;
+transition-duration: 0.4s;
+}
+.peimg:hover {
+box-shadow: 0 5px 15px 0 #aaa;
+}
+</style>
+<div class="pediv1">
+<div class="pediv2">
+<table class="petable">
+<tbody><tr>
+<td class="petd1">
+<a href="/bandizip/help/how-to-use-password-manager/" target="_blank">
+<img class="peimg" src="./img/1.png">
+</a>
+</td>
+</tr>
+<tr>
+<td class="petd2">
+<h4>文字1<a href="/bandizip/help/how-to-use-password-manager/" target="_blank"><img src="./img/outlink.png"></a>
+</h4>
+<p>介绍1
 </p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="pediv2">
+<table class="petable">
+<tbody><tr>
+<td class="petd1">
+<a href="/bandizip/help/repair-archive/" target="_blank">
+<img class="peimg" src="./img/1.png">
+</a>
+</td>
+</tr>
+<tr>
+<td class="petd2">
+<h4>文字2<a href="/bandizip/help/repair-archive/" target="_blank"><img src="./img/outlink.png"></a>
+</h4>
+<p>介绍2
+</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="pediv1">
+<div class="pediv2">
+<table class="petable">
+<tbody><tr>
+<td class="petd1">
+<a href="/bandizip/help/password-recovery/" target="_blank">
+<img class="peimg" src="./img/1.png">
+</a>
+</td>
+</tr>
+<tr>
+<td class="petd2">
+<h4>文字3<a href="/bandizip/help/password-recovery/" target="_blank"><img src="./img/outlink.png"></a>
+</h4>
+<p>介绍3
+</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="pediv2">
+<table class="petable">
+<tbody><tr>
+<td class="petd1">
+<a href="/bandizip/help/image-preview-in-archive/" target="_blank">
+<img class="peimg" src="./img/1.png">
+</a>
+</td>
+</tr>
+<tr>
+<td class="petd2">
+<h4>文字4<a href="/bandizip/help/image-preview-in-archive/" target="_blank"><img src="./img/outlink.png"></a>
+</h4>
+<p>介绍4
+</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<div class="pediv1">
+<table class="petable">
+<tbody><tr>
+
+</tr>
+<tr>
+<td class="petd2">
+
+
+</td>
+</tr>
+</tbody></table>
+</div><h2 class="ltr">功能</h2>
+<ul>
+<li>功能1</li>
+<li>功能2</li>
+<li>功能3</li>
+<li>功能4</li>
+<li>功能5</li>
+<li>功能6</li>
+<li>功能7</li>
+<li>功能8</li>
+</ul>
 
 
 
+</td>
+<td style="vertical-align:top; ">
+</td>
+</tr>
 
 
+</tbody></table>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-K09P7PCSPY"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-K09P7PCSPY');
+</script>
 
 
-
-
-</body>
-
-
-
-</html>
+</body></html>
